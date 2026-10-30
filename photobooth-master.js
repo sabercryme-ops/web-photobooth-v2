@@ -1,8 +1,24 @@
 (function() {
+  // 1. Kunci Domain: Script mati otomatis jika dipasang di domain orang lain
+  const allowed = ['kipainvitation.my.id', 'localhost'];
+  const host = window.location.hostname;
+  if (!allowed.some(d => host === d || host.endsWith('.' + d))) {
+    console.warn('Unauthorized domain');
+    window.__LPB_BLOCKED = true;
+    return;
+  }
+  // 2. Hapus tag <script src="..."> dari tab Inspect Element (Elements)
+  if (document.currentScript) {
+    document.currentScript.remove();
+  }
+})();
+
+
+(function() {
+  if (window.__LPB_BLOCKED) return;
   const rootMount = document.getElementById('lpb1RootCard');
   if (!rootMount) return;
   rootMount.outerHTML = `
-
 
 <!-- ====== TAHAP 1: CSS LUXURY 3D STUDIO COVERFLOW & LINEARICONS ====== -->
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
