@@ -1275,7 +1275,7 @@
   <div class="lpb1-teaser-icon">
     <span class="lnr lnr-camera"></span>
   </div>
-  <h3 class="lpb1-teaser-title">Wedding Photobooth V2</h3>
+  <h3 class="lpb1-teaser-title">Wedding Photobooth</h3>
   <p class="lpb1-teaser-desc">
     Pilih bingkai eksklusif kami, abadikan momen bahagiamu, dan simpan kenangan manis ke Instagram Story
   </p>
